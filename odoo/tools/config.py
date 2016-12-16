@@ -454,6 +454,7 @@ class configmanager(object):
         self.options['translate_modules'].sort()
 
         dev_split = opt.dev_mode and  map(str.strip, opt.dev_mode.split(',')) or []
+        dev_split += self.options['dev_mode'] and  map(str.strip, self.options['dev_mode'].split(',')) or [] #增加配置文件识别 by zyc
         self.options['dev_mode'] = 'all' in dev_split and dev_split + ['pdb', 'reload', 'qweb', 'werkzeug', 'xml'] or dev_split
 
         if opt.pg_path:

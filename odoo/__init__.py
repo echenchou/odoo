@@ -32,7 +32,7 @@ multi_process = False
 # sufficiently deferred so that setting the TZ environment variable
 # in odoo.cli.server was working.
 import os
-os.environ['TZ'] = 'UTC' # Set the timezone...
+os.environ['TZ'] = 'Asia/Hong_Kong' # Set the timezone...
 import time              # ... *then* import time.
 del os
 del time
